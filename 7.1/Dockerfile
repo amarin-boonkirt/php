@@ -65,6 +65,8 @@ RUN apt update && apt dist-upgrade -y && \
 # FILES (it overrides originals)
 ADD conf.d/custom.ini ${PHP_MODS_DIR}/custom.ini
 
+VOLUME /root/.composer
+
 # WORKDIR
 WORKDIR /srv
 
